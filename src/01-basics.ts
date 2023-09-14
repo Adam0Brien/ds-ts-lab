@@ -14,6 +14,11 @@ export interface Colleague {
     } 
   }
 
+  interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
+
 const friend1 = {
     name: "Paul Fleming",
     phone: "087-12345",
@@ -56,9 +61,10 @@ const friend1 = {
       extension: 125,
     },
   };
-  const colleagues = {
-    current: [colleague1, colleague2, colleague3],
-    former: [],
-  };
-  
+
+export const colleagues : ColleagueHistory = {
+  current: [colleague1, colleague2, colleague3],
+  former: [],
+};
+
   console.log(colleagues.current[0]);
